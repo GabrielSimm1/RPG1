@@ -69,7 +69,7 @@ namespace Rpg.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<List<Personagem>>> AlteraPersonagem(int id, Personagem editar)
+        public async Task<ActionResult<List<Personagem>>> AlteraPersonagem(int id, [FromBody] Personagem editar)
         {
             var pesquisa = personagens.Find(x => x.Id == id);
 
